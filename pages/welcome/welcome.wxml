@@ -1,9 +1,13 @@
 <view class="container">
-    <view>
-         <image   class='avatar' src='/image/timg.jpeg'></image>
+ <view>
+        <image class='avatar' src='/image/card.png'></image>
     </view>
-    <view class='motto'>小程序名字</view>
-    <view class="journey-container" bindtap="onTap">
-        <text class="journey">微信登入</text>
+    <view class='motto'>
+    <text style="font-size:80rpx;font-family:PingFang SC,Helvetica Neue,Helvetica,Tahoma,Arial,Microsoft YaHei,\\9ED1\4F53,STHeiTi,sans-serif; color:#a0a0a0;font-size:64rpx;">记忆卡片</text>
     </view>
+    <text style='color:#bbbec4;font-family:PingFang SC,Helvetica Neue,Helvetica,Tahoma,Arial,Microsoft YaHei,\\9ED1\4F53,STHeiTi,sans-serif;font-size:32rpx;'>根据人脑记忆规律帮您巩固记忆</text>
+   <!-- bindtap="onTap" -->
+    <button class="journey-container" open-type="getUserInfo" bindgetuserinfo="login" wx:if="{{regFlag==false}}">
+        微信登入
+    </button>
 </view>

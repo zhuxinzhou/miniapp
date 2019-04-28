@@ -1,0 +1,30 @@
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="page">
+    <view class="page__hd"></view>
+    <view class="page__bd">
+        <view class="weui-article">                 
+         <view class="weui-article__section">
+             <view class="weui-article__h3" style="font-size:60rpx ;text-align:center;">{{card_name}}</view>
+             </view>
+                  <!-- <view class="weui-article__p"style="font-size:40rpx;">
+                        {{card_content}}
+                  </view>
+           <view>
+                <image  src='/image/jiahao.png' mode='widthFix' bindload='imageLoad' data-index="{{index}}" bindtap='previewImg' style="width:{{images[index].width}}rpx; heigth:{{images[index].height}}rpx" />
+            </view> -->
+
+             <template is="wxParse" data="{{wxParseData:card_content.nodes}}"/>
+
+        </view>
+    </view>
+</view>
+<view class='bottom'>
+     
+       <form bindsubmit='study' report-submit='true'>
+               <button class="journey-container" form-type="submit">
+       我已复习
+    </button>
+        </form>
+     
+</view>
